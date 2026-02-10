@@ -85,7 +85,7 @@ router.get('/download/:jobId/download', async (req, res) => {
     res.setHeader('Content-Type', 'application/zip');
     res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
     
-    res.sendFile(archivePath, { root: '/' });
+    res.sendFile(archivePath);
   } catch (error) {
     console.error('Failed to download file:', error);
     res.status(500).json({ error: 'Failed to download file' });
@@ -153,7 +153,7 @@ router.get('/share/:shareCode/download', async (req, res) => {
     res.setHeader('Content-Type', 'application/zip');
     res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
     
-    res.sendFile(job.archivePath, { root: '/' });
+    res.sendFile(job.archivePath);
   } catch (error) {
     console.error('Failed to download from share link:', error);
     res.status(500).json({ error: 'Failed to download file' });
