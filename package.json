@@ -1,0 +1,23 @@
+{
+  "name": "suno-downloader-monorepo",
+  "version": "1.0.0",
+  "description": "Full-stack Suno music downloader with web interface",
+  "private": true,
+  "workspaces": [
+    "cli",
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "npm install && cd cli && npm install && cd ../backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd backend && npm run build && cd ../frontend && npm run build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
