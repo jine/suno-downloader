@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suno Downloader - Download music from Suno AI</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="logo">🎵</span>
+                <span class="brand-name">Suno Downloader</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#installation">Installation</a>
+                <a href="#usage">Usage</a>
+                <a href="https://github.com/jine/suno-downloader" class="github-link">
+                    <svg height="20" viewBox="0 0 16 16" width="20" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </nav>
+        
+        <div class="hero-content">
+            <h1>Download Music from Suno AI</h1>
+            <p class="hero-description">
+                A powerful CLI tool to download playlists, albums, and individual tracks from Suno with metadata preservation and beautiful terminal output.
+            </p>
+            <div class="hero-buttons">
+                <a href="#installation" class="btn btn-primary">Get Started</a>
+                <a href="https://github.com/jine/suno-downloader" class="btn btn-secondary">View on GitHub</a>
+            </div>
+            <div class="hero-code">
+                <code>node dist/index.js "https://suno.com/playlist/abc123" -i</code>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎵</div>
+                        <h3>Individual Tracks</h3>
+                        <p>Download single songs from Suno with full metadata preservation including titles and artwork.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3>Full Playlists</h3>
+                        <p>Download entire playlists with one command. Files are automatically numbered for proper sorting.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🖼️</div>
+                        <h3>Cover Art</h3>
+                        <p>Optional cover image downloads to keep your music library visually organized.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <h3>Beautiful CLI</h3>
+                        <p>Enjoy colorful output with progress spinners and clear status messages powered by Chalk and Ora.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>TypeScript</h3>
+                        <p>Built with TypeScript for type safety and excellent developer experience.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📁</div>
+                        <h3>Organized Output</h3>
+                        <p>Files are saved with numbered prefixes and sanitized filenames for easy management.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="installation" class="installation">
+            <div class="container">
+                <h2>Installation</h2>
+                <div class="installation-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Clone the Repository</h3>
+                            <pre><code>git clone https://github.com/jine/suno-downloader.git
+cd suno-downloader</code></pre>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Install Dependencies</h3>
+                            <pre><code>npm install</code></pre>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Build the Project</h3>
+                            <pre><code>npx tsc</code></pre>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="requirements">
+                    <h3>Prerequisites</h3>
+                    <ul>
+                        <li>Node.js 18 or higher</li>
+                        <li>npm or yarn package manager</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="usage" class="usage">
+            <div class="container">
+                <h2>Usage</h2>
+                
+                <div class="usage-basic">
+                    <h3>Basic Usage</h3>
+                    <pre><code>node dist/index.js <suno-url></code></pre>
+                </div>
+
+                <div class="usage-options">
+                    <h3>Options</h3>
+                    <table class="options-table">
+                        <thead>
+                            <tr>
+                                <th>Option</th>
+                                <th>Description</th>
+                                <th>Default</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>-o, --output <dir></code></td>
+                                <td>Output directory for downloaded files</td>
+                                <td><code>./downloads</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>-i, --images</code></td>
+                                <td>Download cover images as well</td>
+                                <td><code>false</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>-V, --version</code></td>
+                                <td>Output the version number</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td><code>-h, --help</code></td>
+                                <td>Display help for command</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="usage-examples">
+                    <h3>Examples</h3>
+                    
+                    <div class="example">
+                        <h4>Download a playlist</h4>
+                        <pre><code>node dist/index.js "https://suno.com/playlist/abc123"</code></pre>
+                    </div>
+                    
+                    <div class="example">
+                        <h4>Download to custom directory</h4>
+                        <pre><code>node dist/index.js "https://suno.com/@username" -o ./my-music</code></pre>
+                    </div>
+                    
+                    <div class="example">
+                        <h4>Download with cover images</h4>
+                        <pre><code>node dist/index.js "https://suno.com/song/xyz789" -i</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="output" class="output">
+            <div class="container">
+                <h2>Output Structure</h2>
+                <p>Files are organized in numbered format with sanitized filenames:</p>
+                <pre class="file-tree"><code>downloads/
+└── Playlist_Name/
+    ├── 01_Song_Title.mp3
+    ├── 01_Song_Title_cover.jpg
+    ├── 02_Another_Song.mp3
+    └── 02_Another_Song_cover.jpg</code></pre>
+            </div>
+        </section>
+
+        <section id="tech" class="tech">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="tech-flow">
+                    <div class="tech-step">
+                        <div class="tech-number">1</div>
+                        <h4>URL Parsing</h4>
+                        <p>Extracts the Suno playlist/profile URL from command arguments</p>
+                    </div>
+                    <div class="tech-arrow">→</div>
+                    <div class="tech-step">
+                        <div class="tech-number">2</div>
+                        <h4>HTML Fetching</h4>
+                        <p>Retrieves the page content via secure HTTPS connection</p>
+                    </div>
+                    <div class="tech-arrow">→</div>
+                    <div class="tech-step">
+                        <div class="tech-number">3</div>
+                        <h4>Content Extraction</h4>
+                        <p>Parses HTML to extract song IDs, URLs, titles, and metadata</p>
+                    </div>
+                    <div class="tech-arrow">→</div>
+                    <div class="tech-step">
+                        <div class="tech-number">4</div>
+                        <h4>Download</h4>
+                        <p>Streams audio files directly from Suno's CDN</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contribute" class="contribute">
+            <div class="container">
+                <h2>Contributing</h2>
+                <p>Contributions are welcome! Please feel free to submit a Pull Request.</p>
+                <ol>
+                    <li>Fork the repository</li>
+                    <li>Create your feature branch (<code>git checkout -b feature/AmazingFeature</code>)</li>
+                    <li>Commit your changes (<code>git commit -m 'Add some AmazingFeature'</code>)</li>
+                    <li>Push to the branch (<code>git push origin feature/AmazingFeature</code>)</li>
+                    <li>Open a Pull Request</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">🎵</span>
+                    <span>Suno Downloader</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/jine/suno-downloader">GitHub</a>
+                    <a href="https://github.com/jine/suno-downloader/issues">Issues</a>
+                    <a href="https://github.com/jine/suno-downloader/blob/main/LICENSE">License</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with ❤️ by <a href="https://github.com/jine">jine</a></p>
+                <p class="disclaimer">This tool is for educational purposes. Please respect Suno's Terms of Service.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
